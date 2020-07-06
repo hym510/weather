@@ -16,7 +16,7 @@ class Weather
 
     protected $guzzleOptions = [];
 
-    public function __construct(string $key)
+    public function __construct($key)
     {
         $this->key = $key;
     }
@@ -31,7 +31,7 @@ class Weather
         $this->guzzleOptions = $options;
     }
 
-    public function getWeather($city, string $type = 'base', string $format = 'json')
+    public function getWeather($city, $type = 'base', $format = 'json')
     {
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
 
